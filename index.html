@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator - Academic Grade Point Average Calculator</title>
+    <meta name="description" content="Calculate your GPA easily with our comprehensive Grade Point Average calculator. Input credits and grades to get accurate GPA results." />
+    <meta name="author" content="Eng. Trez Kweka" />
+    <meta name="keywords" content="gpa calculator, grade point average, academic calculator, student grades, university gpa" />
+    <link rel="stylesheet" href="gpa-calculator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="torch torch-1"></div>
+        <div class="torch torch-2"></div>
+        <div class="torch torch-3"></div>
+        <div class="floating-particles">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+            <div class="particle particle-5"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- My Profile Section -->
+        <div class="profile-section">
+            <!-- <h2 class="profile-title">My Profile</h2> -->
+            <!-- <img src="trez.png" alt="Profile Picture" class="profile-pic"> -->
+        </div>
+
+        <header class="header">
+            <div class="header-glow"></div>
+            <h1 class="title">
+                <i class="fas fa-calculator"></i>
+                GPA Calculator
+            </h1>
+            <p class="subtitle">Academic Grade Point Average Calculator</p>
+            <!-- <div class="author">Developed by <span class="highlight">Eng. Trez Kweka</span></div> -->
+        </header>
+
+        <main class="main-content">
+            <!-- Step 1: Number of Courses -->
+            <div class="card" id="courseNumberCard">
+                <div class="card-glow"></div>
+                <div class="card-header">
+                    <i class="fas fa-list-ol card-icon"></i>
+                    <h2>Step 1: Number of Courses</h2>
+                </div>
+                <div class="card-content">
+                    <div class="form-group">
+                        <label class="form-label">How many courses do you want to calculate?</label>
+                        <input type="number" id="courseCount" class="form-input" 
+                               placeholder="Enter number of courses" min="1" max="20">
+                    </div>
+                    <button class="btn btn-primary" id="setupCoursesBtn">
+                        <i class="fas fa-arrow-right"></i>
+                        Setup Courses
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Course Details -->
+            <div class="card hidden" id="courseDetailsCard">
+                <div class="card-glow"></div>
+                <div class="card-header">
+                    <i class="fas fa-edit card-icon"></i>
+                    <h2>Step 2: Course Details</h2>
+                </div>
+                <div class="card-content">
+                    <div id="coursesContainer"></div>
+                    <div class="form-actions">
+                        <button class="btn btn-secondary" id="backBtn">
+                            <i class="fas fa-arrow-left"></i>
+                            Back
+                        </button>
+                        <button class="btn btn-primary" id="calculateBtn">
+                            <i class="fas fa-calculator"></i>
+                            Calculate GPA
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Results -->
+            <div class="card hidden" id="resultsCard">
+                <div class="card-glow result-glow"></div>
+                <div class="card-header">
+                    <i class="fas fa-trophy card-icon"></i>
+                    <h2>Your GPA Results</h2>
+                </div>
+                <div class="card-content">
+                    <div class="result-container">
+                        <div class="gpa-display">
+                            <div class="gpa-value" id="gpaValue">0.00</div>
+                            <div class="gpa-label">Overall GPA</div>
+                        </div>
+                        <div class="gpa-breakdown">
+                            <div class="breakdown-item">
+                                <span class="breakdown-label">Total Credit Hours:</span>
+                                <span class="breakdown-value" id="totalCredits">0</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="breakdown-label">Total Grade Points:</span>
+                                <span class="breakdown-value" id="totalGradePoints">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn btn-secondary" id="resetBtn">
+                            <i class="fas fa-redo"></i>
+                            Calculate Again
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Eng. Trez Kweka. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="gpa-calculator.js"></script>
+</body>
+</html>
